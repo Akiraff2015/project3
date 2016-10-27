@@ -9,7 +9,8 @@ $(document).ready(function(){
     var params = {
       email: $('#createEmail').val(),
       password: $('#createPassword').val(),
-      password_confirmation: $('#confirmPassword').val()
+      password_confirmation: $('#confirmPassword').val(),
+      name: $('#createName').val()
     }
 
     $.auth.emailSignUp(params).then(function(user){

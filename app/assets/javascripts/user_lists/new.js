@@ -30,7 +30,10 @@ $('.user_lists.new').ready(function(){
 		e.preventDefault();
 		$(this).parent('div').parent('div').parent('div').remove();
 		countInputField--;
+<<<<<<< HEAD
 	});
+=======
+>>>>>>> bb7479eea051fdf128a72f249e9986753f4e95ef
 
 	$('#addInputButton').on('click', function() {
 		console.log("test");

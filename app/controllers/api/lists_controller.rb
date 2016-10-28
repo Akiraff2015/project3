@@ -6,7 +6,7 @@ class API::ListsController < ApplicationController
   end
 
   def show
-    render json: @list
+    # render json: @list
   end
 
 

@@ -1,6 +1,8 @@
-# json.array! @lists do |list|
+# json.array!@lists do |list|
+#   json.(list, :title, :description)
+#   json.restaurants list.restaurants, :id, :name
 #   json.merge! list.attributes
-#   # this gives me :title, :description, :user_id
-#   json.user_email   list.user.email
-#   json.user_name    list.user.name
+#   json.list_restaurants   list.restaurants
 # end
+
+

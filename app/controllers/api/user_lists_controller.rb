@@ -3,7 +3,6 @@ class API::UserListsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_userlists, only: [:index]
   before_action :set_userlist, only: [:show, :update, :destroy]
-  before_action :set_list
 
 # CRUD
 # 1
@@ -16,10 +15,9 @@ class API::UserListsController < ApplicationController
     render json: @userlist
   end
 
-
 # 3
   def create
-    @userlist = List.new(userlist_params)
+    @userlist = current_user.lists.new(userlist_params)
 
     if @userlist.save
       render json: @userlist
@@ -50,18 +48,16 @@ class API::UserListsController < ApplicationController
 # PRIVATE METHODS
   private
 
-    def set_list
-      @list = List.find_by(id: params[:id])
+    def email
+      @email = List.find_by(id: param[:id]).user.email
     end
 
     def set_userlists
-      @userlists = User.includes(:lists).all
-      # current_user.lists
+      @userlists = current_user.lists
     end
 
     def set_userlist
-      @userlist = User.includes(:lists).find_by(id: params[:id])
-      # current_user.lists.find_by(id: params[:id])
+      @userlist = current_user.lists.find_by(id: params[:id])
     end
 
     def userlist_params

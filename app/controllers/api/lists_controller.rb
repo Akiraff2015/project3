@@ -6,7 +6,7 @@ class API::ListsController < ApplicationController
   end
 
   def show
-    # render json: @list
+    render json: @list
   end
 
 
@@ -14,7 +14,7 @@ class API::ListsController < ApplicationController
 private
 
   def set_lists
-    @lists = List.all
+    @lists = List.includes(:user, :restaurants).all
   end
 
   def set_list

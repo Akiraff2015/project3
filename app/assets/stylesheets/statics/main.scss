@@ -1,12 +1,18 @@
 .statics.main {
+  background: image-url('restaurantblurred.jpg');
 
-  #allLists {
-    background-color: blue;
+  h2 {
+    color: white;
+    padding: 30px;
+    margin: 0px;
   }
 
   .collapsible-header {
-    height: 80px;
+    height: 50px;
   }
 
+  #listTitle {
+    font-weight: bold;
+  }
 
 }

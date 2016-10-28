@@ -37,8 +37,17 @@
 
   rl_params = {
     list_id: random_List.id,
-    restaurant_id: random_Restaurant.id
+    restaurant_id: random_Restaurant.id,
+    checked: Faker::Boolean.boolean
   }
 
   r = RestaurantList.create(rl_params)
+
+  ul_params = {
+    list_id: random_List.id,
+    user_id: random_User.id
+  }
+
+  b = ListBookmark.create(ul_params)
+
 end

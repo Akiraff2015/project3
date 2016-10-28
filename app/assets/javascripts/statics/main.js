@@ -15,7 +15,7 @@ $('.statics.main').ready(function(){
 												'<li>' +
 													'<div class="collapsible-header">' +
 														'<div class="col s11">' + '<h6>' + list.title + '</h6>' + '<span>' + ' ' + 'by' + ' ' + list.user_email + '</span>' + '</div>' +
-														'<div class="col s1">' + '<i class="bookmark fa fa-star" data-favourite="no" aria-hidden="true"></i>' + '</div>' +
+														'<div class="col s1">' + '<i data-id=' + list.id + 'class="bookmark fa fa-star" data-favourite="no" aria-hidden="true"></i>' + '</div>' +
 													'</div>' +
 													'<div class="collapsible-body">' +
 	                					'<p>' + list.description + '</p>' +
